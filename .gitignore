@@ -1,4 +1,5 @@
-config_local.py
+/annotations
+/data_image
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
