@@ -72,6 +72,7 @@ regex==2024.11.6
 requests==2.32.3
 rich==14.0.0
 safetensors==0.5.3
+scikit-learn==1.7.0
 scipy==1.15.3
 seaborn==0.13.2
 setuptools==63.2.0
@@ -85,6 +86,7 @@ srsly==2.5.1
 stack-data==0.6.3
 sympy==1.14.0
 thinc==8.3.6
+threadpoolctl==3.6.0
 tokenizers==0.21.1
 torch==2.7.1
 tornado==6.5.1
@@ -101,4 +103,3 @@ wcwidth==0.2.13
 weasel==0.4.1
 wordcloud==1.9.4
 wrapt==1.17.2
-emoji==0.6.0
