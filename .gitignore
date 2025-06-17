@@ -1,6 +1,10 @@
+# Project specific folders
 /annotations
 /data_image
 deep_env/
+
+# Keras files
+*.keras
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
