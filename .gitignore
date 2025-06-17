@@ -176,3 +176,6 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+results_task_1_vinai_bertweet-base
+logs
