@@ -2,6 +2,7 @@
 /annotations
 /data_image
 deep_env/
+/models
 
 # Keras files
 *.keras
