@@ -1,6 +1,11 @@
+# Project specific folders
 /annotations
 /data_image
 deep_env/
+/models
+
+# Keras files
+*.keras
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -176,3 +181,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+results_task_1_vinai_bertweet-base
+logs
+deep_env2
+model
