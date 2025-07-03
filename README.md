@@ -46,15 +46,10 @@ We run an in-depth analysis on the dataset which you can replicate with the note
 
 ### Important Findings
 Through our analysis of the dataset, we identified that there are **duplicated images with different IDs in the CrisisMMD dataset**.
-<figure align=center>
-    <img src=images\duplicate_images_distribution.png width="75%">
-    <figcaption>Number of duplicated images per hash value.</figcaption>
-</figure>
 
-<figure align=center>
-    <img src=images/duplicated_images.png width="75%">
-    <figcaption>Example of a same image having different IDs.</figcaption>
-</figure>
+![duplicates per hash](./images/duplicate_images_distribution.png)
+
+![example duplicate](./images/duplicated_images.png)
 
 This issue introduces biases in model training and evaluation, as the same image may appear in both the training and test sets, which can artificially inflate the performance.
 
@@ -118,37 +113,28 @@ We explored three distinct fusion techniques:
 
 - ### Early Fusion Technique ([`05a_multimodal_early_fusion.ipynb`](./05a_multimodal_early_fusion.ipynb))
 
-    <figure align=center>
-        <img src=images\Multimodal_early_fusion_architecture.png>
-        <figcaption>Early Fusion Multimodal Model architecture overview.</figcaption>
-    </figure>
+  ![early fusion](./images/Multimodal_early_fusion_architecture.png)
 
-    In this technique, text and image features are concatenated or merged at an early stage of the model architecture, typically after initial feature extraction but before the final classification layers. This allows the model to learn combined representations from both modalities simultaneously from the beginning of the learning process. The fused features are then fed into subsequent layers for multitask learning on both humanitarian and informativeness tasks.
+  In this technique, text and image features are concatenated or merged at an early stage of the model architecture, typically after initial feature extraction but before the final classification layers. This allows the model to learn combined representations from both modalities simultaneously from the beginning of the learning process. The fused features are then fed into subsequent layers for multitask learning on both humanitarian and informativeness tasks.
 
 - ### Late Fusion ([`05b_multimodal_late_fusion.ipynb`](./05b_multimodal_late_fusion.ipynb))
 
-    <figure align=center>
-        <img src=images\Multimodal_late_fusion_architecture.png width="75%">
-        <figcaption>Late Fusion Multimodal Model architecture overview.</figcaption>
-    </figure>
+  ![late fusion](./images/Multimodal_late_fusion_architecture.png)
 
-    In contrast to early fusion, late fusion combines the predictions or decision scores from independently trained unimodal models. Each modality (text and image) is processed by its own specialized model (e.g., RoBERTa for text, EfficientNetB0 for images), which then generates separate predictions. These individual predictions are subsequently merged, often through weighted averaging or another aggregation strategy, to produce the final multimodal classification. This approach can be beneficial for its modularity and interpretability.
+  In contrast to early fusion, late fusion combines the predictions or decision scores from independently trained unimodal models. Each modality (text and image) is processed by its own specialized model (e.g., RoBERTa for text, EfficientNetB0 for images), which then generates separate predictions. These individual predictions are subsequently merged, often through weighted averaging or another aggregation strategy, to produce the final multimodal classification. This approach can be beneficial for its modularity and interpretability.
 
 - ### Joint Fusion ([`05c_multimodal_joint_fusion.ipynb`](./05c_multimodal_joint_fusion.ipynb))
-    
-    <figure align=center>
-        <img src=images\Multimodal_joint_fusion_architecture.png>
-        <figcaption>Joint Fusion Multimodal Model architecture overview.</figcaption>
-    </figure>
-    
-    While "joint fusion" can sometimes be used interchangeably with early fusion, in this context, it refers to a method where text and image features are integrated into a single, cohesive model that processes both modalities together throughout various layers, not just at an initial concatenation step. This technique aims to capture complex cross-modal interactions by designing a unified network architecture that simultaneously learns and combines representations from both inputs, leading to a more deeply integrated understanding for multitask learning on humanitarian and informativeness tasks.
+
+  ![joint fusion](./images/Multimodal_joint_fusion_architecture.png)
+
+  While "joint fusion" can sometimes be used interchangeably with early fusion, in this context, it refers to a method where text and image features are integrated into a single, cohesive model that processes both modalities together throughout various layers, not just at an initial concatenation step. This technique aims to capture complex cross-modal interactions by designing a unified network architecture that simultaneously learns and combines representations from both inputs, leading to a more deeply integrated understanding for multitask learning on humanitarian and informativeness tasks.
 
 ## How to Use
     
 1. **First clone the repository locally:**
 
     ```sh
-    git clone https://github.com/FLaTNNBio/GA-DPAMSA
+    git clone [https://github.com/FLaTNNBio/GA-DPAMSA](https://github.com/andreaceto/multimodal-crisis-classification.git)
     ```
 
 2. **Place in the project directory and create a virtual environment (highly recommended)**
