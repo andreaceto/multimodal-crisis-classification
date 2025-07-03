@@ -1,3 +1,4 @@
+# Project specific folders
 /annotations
 /data_image
 deep_env/
@@ -178,3 +179,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+results_task_1_vinai_bertweet-base
+logs
+deep_env2
+model
