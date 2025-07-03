@@ -1,6 +1,8 @@
 /annotations
 /data_image
 deep_env/
+/models
+/images
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
