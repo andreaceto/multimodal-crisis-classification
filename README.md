@@ -151,7 +151,7 @@ We explored three distinct fusion techniques:
 
 4. **Download the dataset: https://crisisnlp.qcri.org/crisismmd (CrisisMMD dataset version v2.0)**
 
-5. **Create a `.env` file with the following path variables:**
+5. **Create a `.env` file with the following path variables and your actual paths:**
     ```bash
     DATASET_DIR = path\to\CrisisMMD_v2.0\
     ANNOTATIONS_DIR = path\to\annotations\
